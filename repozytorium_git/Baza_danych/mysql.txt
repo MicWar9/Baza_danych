@@ -31,7 +31,7 @@ alter table postac add funkcja varchar(40);
 
 update postac set funkcja = 'kapitan' where id_postaci = 1;
 
-alter table postac add statek varchar(40), foreign key(statek) references statek(nazwa_statku);
+alter table postac add (statek varchar(40), foreign key(statek) references statek(nazwa_statku));
 
 update postac set statek = 'sokol' where id_postaci < 6 and rodzaj = 'wiking';
 
