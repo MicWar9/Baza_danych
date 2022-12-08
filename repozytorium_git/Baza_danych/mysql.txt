@@ -29,7 +29,7 @@ insert into statek values ('sokol', 'duzy', '1120-01-01', 80), ('koliber', 'maly
 
 alter table postac add funkcja varchar(40);
 
-update postac set funkcja = 'kapitan' where postac_id = 1;
+update postac set funkcja = 'kapitan' where id_postaci = 1;
 
 alter table postac add statek varchar(40), foreign key(statek) references statek(nazwa_statku);
 
